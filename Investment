@@ -2,12 +2,7 @@ package investment;
 
 /**
  * Foram Gandhi
- * 794961
  * Investment
- * 11/03/2016
- * ICS3U0B
- * MrVeera
- * @author 794961
  */
 import java.util.Scanner;
 public class Investment {
