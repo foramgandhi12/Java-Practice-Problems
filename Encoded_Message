@@ -1,0 +1,42 @@
+package exercise.pkg10;
+import java.util.Scanner; 
+public class Exercise10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+Scanner input = new Scanner (System.in);    
+        String word; 
+        int coded_word;
+        char [] message, coded; 
+    
+    System.out.print("Enter a string: "); 
+        word =input.nextLine(); 
+        
+        coded_word=word.length(); 
+        message=word.toCharArray(); 
+        coded=message; 
+    System.out.print("Encoded message: "); 
+    
+    for (int i=0; i<message.length; i++){ 
+        if (message[i] != 32 && message [i] != 121 && message [i] !=122){ 
+            coded [i]=(char)(message[1]+2); 
+        }
+        else if (message[i] == 32){
+            coded [i] = (message[i]);
+        }
+        else if (message[i] == 121){
+            coded [i] = (message[i]);
+        } 
+        else if (message[i] == 122){ 
+            coded [i] = (message[i]);
+    System.out.print("coded[i]");
+        }
+    System.out.println("Encoded Message: "+coded[i]);    
+    } 
+    
+    
+    }
+      } 
