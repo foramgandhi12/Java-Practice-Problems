@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package foodorder.pkg11;
+
+/**Foram Gandhi
+ * Chapter 4, Exercise 11
+ */
+import java.util.Scanner;
+
+public class FoodOrder11 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        double burgers;
+        double fries;        
+        double sodas; 
+        double final_total;
+        double no_tax_total;
+        double tax;
+        double tendered;
+        double change; 
+        final double BURGERS_PRICE=1.69; 
+        final double FRIES_PRICE=1.09;
+        final double SODAS_PRICE=0.99;
+               
+        Scanner input =new Scanner(System.in);
+        
+        System.out.print("Enter the number of burgers: ");
+            burgers=input.nextInt();
+        
+        System.out.print("Enter the number of fries: "); 
+            fries=input.nextInt();
+        
+        System.out.print("Enter the number of sodas: ");
+            sodas=input.nextInt();
+        
+        no_tax_total=(burgers*BURGERS_PRICE)+(fries*FRIES_PRICE)+(sodas*SODAS_PRICE);
+            System.out.format("Total before tax: $ "+"%.2f%n",no_tax_total);
+            
+        tax=0.065*(burgers*BURGERS_PRICE)+0.065*(fries*FRIES_PRICE)+0.065*(sodas*SODAS_PRICE);
+            System.out.format("Tax: $ "+"%.2f%n",tax);
+        
+        final_total=no_tax_total+tax;
+            System.out.format("Final total: $ "+"%.2f%n",final_total);
+ 
+        
+        System.out.print("Enter amount tendered: $ ");
+            tendered=input.nextInt();
+        change=(int)tendered-final_total;
+            System.out.format("Change: $ "+"%.2f%n",change);
+    }
+    
+}
