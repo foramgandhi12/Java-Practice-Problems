@@ -1,0 +1,40 @@
+package investment;
+
+/**
+ * Foram Gandhi
+ * 794961
+ * Investment
+ * 11/03/2016
+ * ICS3U0B
+ * MrVeera
+ * @author 794961
+ */
+import java.util.Scanner;
+public class Investment {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        final int MINVALUE=5000;
+        int investment=2500;
+        double interest=0.075;
+        double totalvalue;
+       
+        Scanner input= new Scanner(System.in);
+        
+        do {
+            investment=(investment+investment*interest);
+        } while (totalvalue>=MINVALUE);
+        
+        else 
+            {
+                
+                }
+        System.out.print("How many years will it take for a $"+investment+" investment to be worth at least $"+MINVALUE+" if compounded annually at "+interest+" %? ");
+            totalvalue=input.nextInt();
+    }
+    
+}
