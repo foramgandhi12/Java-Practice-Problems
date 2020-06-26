@@ -1,0 +1,61 @@
+package sleep;
+
+/**
+ * Foram Gandhi
+ * Sleep
+ */
+import java.util.Scanner;
+public class Sleep {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int year1, month1, day1; 
+        int year2, month2, day2;
+        int sleep=8;
+        int days_in_year=365;
+        int days_in_month=30;
+        int birth_date;
+        int todays_date;
+        int total_years;
+        int total_year_days;
+        int total_months;
+        int total_months_days;
+        int total_days;
+        int total_days_alive;
+        int total_sleep;
+       
+    Scanner input = new Scanner(System.in);
+        System.out.print("Enter your birthdate: ");
+        System.out.print("\nYear: ");
+        year1=input.nextInt(); 
+        System.out.print("Month: ");
+        month1=input.nextInt();
+        System.out.print("Day: ");
+        day1=input.nextInt(); 
+        
+        System.out.println("Enter today's date: ");
+        System.out.print("Year: ");
+        year2=input.nextInt();
+        System.out.print("Month: ");
+        month2=input.nextInt();
+        System.out.print("Day: ");
+        day2=input.nextInt();
+        
+        total_years= year2-year1;
+        total_year_days=total_years*365;
+        total_months=month2-month1;
+        total_months_days=total_months*30;
+        total_days=day2-day1;
+        total_days_alive=total_year_days+total_months_days+total_days;
+
+        System.out.println("You have been alive for "+total_days_alive+"days"); 
+
+        total_sleep=sleep*total_days_alive;
+        System.out.println("You have slept for "+total_sleep+" hours.)        
+        
+    }
+    
+}
