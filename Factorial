@@ -1,0 +1,36 @@
+package factorial;
+
+/**
+ * Foram Gandhi
+ * Factorial
+ */
+import java.util.Scanner;
+public class Factorial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        int num, factorial=0;
+        
+        Scanner input= new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+            num=input.nextInt();
+            
+        for (int counter=num; counter>0; counter--)
+        {
+            if (counter==1)
+            {
+            System.out.print(counter);    
+            }
+         
+            else
+            {
+            System.out.print(counter+"*");
+            }
+        }
+    }
+}
