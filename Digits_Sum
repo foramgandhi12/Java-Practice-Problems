@@ -1,0 +1,55 @@
+package digits.sum;
+
+/**
+ * Foram Gandhi
+ * Digits Sum
+ */
+import java.util.Scanner;
+public class DigitsSum {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        int num, digits, digit1, num1; 
+        int sum=0;    
+        int counter=0;
+        
+        Scanner input=new Scanner(System.in);
+        
+        System.out.print("Enter a positive integer: ");
+            num=input.nextInt();
+        
+        num1=num;
+        
+        while (num1/10>=10)
+           {
+            num1=num1/10;
+            counter++;
+           }
+        
+        if (counter==0)
+           {
+            digits=1;
+           }
+        
+        else
+           {
+            digits=counter +2;
+           }
+        
+        while(digits>=0)
+           {
+            digit1=num/(int)(Math.pow(10,digits));
+            sum=sum+digit1;
+            num=num%((int)(Math.pow(10,digits)));
+            digits--;
+           }
+        
+        System.out.println("The sum of the digits is: "+sum);
+        
+    }
+    
+}
