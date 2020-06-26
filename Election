@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package election.pkg16;
+
+/**Foram Gandhi
+ * Chapter 4, Exercise 16
+ */import java.util.Scanner;
+public class Election16 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    
+    double awbreyvotes1, awbreyvotes2, awbreyvotes3;
+        double martinezvotes1, martinezvotes2, martinezvotes3;
+        int total_votes;
+        double awbreytotalvotes;
+        double martineztotalvotes;
+        int awbreytotalvotes2;
+        int martineztotalvotes2;
+        double martinez_percent;
+        double awbrey_percent;
+        
+        Scanner input=new Scanner (System.in);
+        
+    System.out.print("Amount of votes for Awbrey in New York: ");
+        awbreyvotes1=input.nextInt();
+    System.out.print("Amount of votes for Awbrey in New Jersey: ");
+        awbreyvotes2=input.nextInt();
+    System.out.print("Amount of votes for Awbrey in Connecticut: ");
+        awbreyvotes3=input.nextInt();
+        
+    System.out.print("\nAmount of votes for Martinez in New York: ");
+        martinezvotes1=input.nextInt();
+    System.out.print("Amount of votes for Martinez in New Jersey: ");
+        martinezvotes2=input.nextInt();
+    System.out.print("Amount of votes for Martinez in Connecticut: ");
+        martinezvotes3=input.nextInt();
+        
+        awbreytotalvotes=(int)awbreyvotes1+(int)awbreyvotes2+(int)awbreyvotes3;
+        martineztotalvotes=(int)martinezvotes1+(int)martinezvotes2+(int)martinezvotes3;
+        total_votes=(int)awbreytotalvotes+(int)martineztotalvotes;
+        awbrey_percent=(awbreytotalvotes/total_votes)*100;
+        martinez_percent=(martineztotalvotes/total_votes)*100;
+        awbreytotalvotes2=(int)awbreytotalvotes;
+        martineztotalvotes2=(int)martineztotalvotes;
+                
+    System.out.println("");
+    System.out.format("%-16s %9s %12s%n","Candidate","Votes","Percentages");
+    System.out.format("%-16s %9s    %.2f %-1s%n","Awbrey",awbreytotalvotes2,awbrey_percent,"%");
+    System.out.format("%-16s %9s    %.2f %-1s%n%n","Martinez",martineztotalvotes2,martinez_percent,"%");
+    System.out.println("TOTAL VOTES:    "+total_votes);
+        
+    }
+    
+}
