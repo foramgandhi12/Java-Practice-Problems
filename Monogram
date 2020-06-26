@@ -1,0 +1,40 @@
+package monogram;
+
+/**
+ * Foram Gandhi
+ * Monogram
+ */
+import java.util.Scanner;
+public class Monogram {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        String firstname, middlename, lastname, monogram;
+       
+        Scanner input= new Scanner(System.in);
+       
+        System.out.print("Enter your first name: ");
+            firstname=input.next();
+        
+        System.out.print("Enter your middle name: ");
+            middlename=input.next();
+        
+        System.out.print("Enter your last name: ");
+            lastname=input.next();
+        
+        firstname=firstname.toLowerCase();
+        middlename=middlename.toLowerCase();
+        lastname=lastname.toUpperCase();
+            
+        System.out.print("Your monogram is: ");
+        System.out.print(firstname.charAt(0));
+        System.out.print(middlename.charAt(0));
+        System.out.print(lastname.charAt(0));
+            
+    }
+    
+}
