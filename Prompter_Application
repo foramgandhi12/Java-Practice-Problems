@@ -1,0 +1,44 @@
+package prompter;
+
+/**
+ * Foram Gandhi
+ * 794961
+ * Prompter
+ * 27/10/2016
+ * ICS3U0B
+ * MrVeera
+ * @author 794961
+ */
+import java.util.Scanner;
+public class Prompter {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        int minvalue, maxvalue, number;
+        
+        Scanner input= new Scanner(System.in);
+        
+        System.out.print("The minimum value is: ");
+            minvalue=input.nextInt();
+        
+        System.out.print("The maximum value is: ");
+            maxvalue=input.nextInt();
+            
+        do 
+         {
+            System.out.print("Enter a number between "+minvalue+" and "+maxvalue+": ");
+                number=input.nextInt();    
+         } while (number<minvalue || number>maxvalue);
+        
+        if (number>=minvalue && number<=maxvalue)
+         {
+            System.out.println("The number you entered is within the range.");
+         }
+        
+    }
+    
+}
