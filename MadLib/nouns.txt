@@ -1,0 +1,5 @@
+manager
+developer
+consultant
+scientist
+designer
